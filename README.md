@@ -16,7 +16,7 @@ actions, validate results, and update ServiceNow automatically.
 - `client/` — Flutter app: Dashboard + Admin Panel (kill switch, resource/queue management, internal cost/usage view).
 - `server/host/` — Rust: API gateway, split auth (SSO for humans, mTLS/JWT for services), policy engine, execution engine, SQLx + Postgres (with pgvector).
 - `server/agent/` — Python: AI orchestrator + a single shared MCP server exposing approved solutions as tools.
-- Redis Streams ties the stages (received → proposed → approved → executed → validated) together, single VM, no containers for now.
+- Valkey Streams ties the stages (received → proposed → approved → executed → validated) together, single VM, no containers for now.
 
 See [!docs/INFRA.md](!docs/INFRA.md) for the full breakdown and remaining
 open questions.
